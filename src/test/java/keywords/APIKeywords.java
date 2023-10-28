@@ -3,20 +3,13 @@ package keywords;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
 import net.serenitybdd.annotations.Steps;
-
-import static net.serenitybdd.rest.RestRequests.given;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.is;
 
 import restassured.steps.APISteps;
 
 public class APIKeywords {
     @Steps
     APISteps api;
-
-    private Response response;
 
     @Given("the valid endpoint to test")
     public void theValidEndpointToTest() {
@@ -102,7 +95,7 @@ public class APIKeywords {
     //----------------------------------
 
 
-    //GET SINGLE BOOK ORRDER
+    //GET SINGLE BOOK ORDER
     @When("the request is sent to the server with the get single order path")
     public void theRequestIsSentToTheServerWithTheGetSingleOrderPath() {
         api.sendSingleBookOrderPathGetRequest();

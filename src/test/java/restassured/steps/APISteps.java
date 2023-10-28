@@ -8,7 +8,6 @@ import io.restassured.response.Response;
 import net.serenitybdd.annotations.Step;
 import restassured.util.PropertyHelper;
 
-import static net.serenitybdd.rest.RestRequests.post;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.*;
@@ -18,17 +17,14 @@ import static org.hamcrest.Matchers.*;
 
 public class APISteps {
     private Response response;
-    private String statusPath = "status";
-    private String apiAuthPath = "api-clients/";
-    private String booksListPath = "books"; //single book: books/<id>
-    private String bookOrdersPath = "orders"; //single order: orders/<id>
+    private final String statusPath = "status";
+    private final String apiAuthPath = "api-clients/";
+    private final String booksListPath = "books"; //single book: books/<id>
+    private final String bookOrdersPath = "orders"; //single order: orders/<id>
 
     @Step
     public void setEndpoint () {
         RestAssured.baseURI = "https://simple-books-api.glitch.me";
-        /*response = given().when().get();
-        response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("message", equalTo("Welcome to the Simple Books API."));*/
     }
 
     @Step
@@ -91,17 +87,15 @@ public class APISteps {
                 get(booksListPath);
     }
 
-    private int bookId = 0;
-
     @Step
     public void verifyListOfBooksPathStatusCodeAndBodyReceived() {
         response.then().assertThat().statusCode(200);
 
         List<Map<String, Object>> books = response.as(new TypeRef<List<Map<String, Object>>>() {});
 
-        for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).get("available").equals(true)) {
-                bookId = Integer.parseInt(books.get(i).get("id").toString());
+        for (Map<String, Object> book : books) {
+            if (book.get("available").equals(true)) {
+                int bookId = Integer.parseInt(book.get("id").toString());
                 PropertyHelper.writeVariableValue("bookId", bookId);
                 break;
             }
