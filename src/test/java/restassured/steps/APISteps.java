@@ -49,8 +49,9 @@ public class APISteps {
     @Step
     public void authSendJSONBodyAndGetTokenPostRequest() {
         JSONObject jsonData = new JSONObject();
-        jsonData.put("clientName", "Andrei");
-        jsonData.put("clientEmail", "andrei" + PropertyHelper.readVariableValueInt("counter") + "@example.com");
+        jsonData.put("clientName", customerName);
+        jsonData.put("clientEmail", "user" + PropertyHelper.readVariableValueInt("counter") + "@example.com");
+        PropertyHelper.incrementVariable("counter");
 
         postAuth = given()
                 .contentType(ContentType.JSON)
@@ -64,7 +65,6 @@ public class APISteps {
                 .path("accessToken")
                 .toString();
 
-        PropertyHelper.incrementVariable("counter");
         PropertyHelper.writeVariableValue("accessToken", accessToken);
     }
 
@@ -250,6 +250,5 @@ public class APISteps {
         response.then().assertThat()
                 .statusCode(404);
         assertThat(response.getBody().asString().contains("error")).as("Order deleted").isTrue();
-        PropertyHelper.writeVariableValue("orderId", "<orderId deleted>");
     }
 }
