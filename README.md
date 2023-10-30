@@ -1,6 +1,6 @@
 # Simple Book API Testing
 
-This project is designed to demonstrate how to use RestAssured, Cucumber, Java, and Maven to test a simple book API.
+This project is designed to demonstrate how to use RestAssured, Cucumber, Java, and Maven to test an API.
 
 ## Table of Contents
 
@@ -15,11 +15,11 @@ This project is designed to demonstrate how to use RestAssured, Cucumber, Java, 
 
 ## Description
 
-This project provides a set of automated tests for a simple book API using RestAssured for API testing, Cucumber for behavior-driven development (BDD), Java for the programming language, and Maven for project management.
+This project provides a set of automated tests for the [simple books API](https://simple-books-api.glitch.me/) using RestAssured for API testing, Cucumber for behavior-driven development (BDD), Java for the programming language, and Maven for project management.
 
 ## Features
 
-- Automated testing of a simple book API endpoints
+- Automated testing of an API endpoints
 - Behavior-driven development (BDD) with Cucumber
 - Easy integration with CI/CD pipelines
 - Maven-based project management
@@ -54,7 +54,7 @@ To run the tests, use the following Maven command:
 ```bash
 mvn clean verify
 ```
-This will trigger the tests written using Cucumber and RestAssured against the "Simple Book API".
+This will trigger the tests written using Cucumber and RestAssured against the API.
 
 ## Test Structure
 
