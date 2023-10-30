@@ -70,4 +70,3 @@ Serenity BDD generates comprehensive and easily understandable reports after tes
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
