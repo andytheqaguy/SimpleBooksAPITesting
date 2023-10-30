@@ -15,7 +15,7 @@ This project is designed to demonstrate how to use RestAssured, Cucumber, Java, 
 
 ## Description
 
-This project provides a set of automated tests for a "Simple Book API" using RestAssured for API testing, Cucumber for behavior-driven development (BDD), Java for the programming language, and Maven for project management.
+This project provides a set of automated tests for a simple book API using RestAssured for API testing, Cucumber for behavior-driven development (BDD), Java for the programming language, and Maven for project management.
 
 ## Features
 
