@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.*;
 
-import static net.serenitybdd.rest.RestRequests.given;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class APISteps {

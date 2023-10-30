@@ -10,10 +10,10 @@
 
     <properties>
         <serenity.version>4.0.18</serenity.version>
-        <serenity.maven.version>4.0.18</serenity.maven.version>
+        <serenity.maven.version>${serenity.version}</serenity.maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.cucumber.version>4.0.18</serenity.cucumber.version>
-        <serenity.restassured.version>4.0.18</serenity.restassured.version>
+        <serenity.cucumber.version>${serenity.version}</serenity.cucumber.version>
+        <serenity.restassured.version>${serenity.version}</serenity.restassured.version>
         <encoding>UTF-8</encoding>
     </properties>
 
@@ -80,18 +80,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->

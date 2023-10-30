@@ -1,4 +1,4 @@
-# Simple Book API Testing
+# Simple Books API Testing
 
 This project is designed to demonstrate how to use RestAssured, Cucumber, Java, and Maven to test an API.
 
